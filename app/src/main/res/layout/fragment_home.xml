@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginBottom="60dp"
+    tools:context=".ui.Home">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_youtube_logo_2017" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cast_tv"
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_ytp_id_22"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/notifications" />
+
+                    <ImageView
+                        android:id="@+id/notifications"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_vector__10_"
+                        app:layout_constraintLeft_toRightOf="@+id/cast_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/search" />
+
+                    <ImageView
+                        android:id="@+id/search"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_vector__11_"
+                        app:layout_constraintLeft_toRightOf="@+id/notifications"
+                        app:layout_constraintRight_toLeftOf="@+id/profile_photo"
+                        tools:ignore="ContentDescription" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:riv_border_color="#E5E5E5"
+                        app:riv_corner_radius="10dip"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/round_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#fff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tool_bar"
+                app:tabIndicatorColor="#FB0303"
+                app:tabSelectedTextColor="#FB0303" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/round_tabs" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+

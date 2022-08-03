@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_header2">
+
+<!--    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.youtubeapi.ui.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/subscribtionFragment"
+        android:name="com.example.youtubeapi.ui.SubscribtionFragment"
+        android:label="fragment_subscribtion"
+        tools:layout="@layout/fragment_subscribtion" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.youtubeapi.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />-->
+</navigation>

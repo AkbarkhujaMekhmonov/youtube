@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/consist">
+
+    <fragment
+        android:id="@+id/consist"
+        android:name="com.example.youtubeapi.ui.Consist"
+        android:label="fragment_consist"
+        tools:layout="@layout/fragment_consist" />
+    <fragment
+        android:id="@+id/shorts2"
+        android:name="com.example.youtubeapi.ui.Shorts"
+        android:label="fragment_shorts"
+        tools:layout="@layout/fragment_shorts" />
+    <include app:graph="@navigation/nav_header2" />
+</navigation>

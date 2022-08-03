@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Consist">
+
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.example.youtubeapi.ui.Home"
+        android:layout_width="match_parent"
+        tools:layout="@layout/fragment_home"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/main_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_bold"
+            app:layout_constraintBottom_toTopOf="@+id/home_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/short_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/home_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/main_button"
+            app:layout_constraintRight_toRightOf="@+id/main_button"
+            app:layout_constraintTop_toBottomOf="@+id/main_button" />
+
+        <ImageView
+            android:id="@+id/short_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_group_3"
+            app:layout_constraintBottom_toTopOf="@+id/shorts_tv"
+            app:layout_constraintLeft_toRightOf="@+id/main_button"
+            app:layout_constraintRight_toLeftOf="@+id/add_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shorts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shorts"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/short_button"
+            app:layout_constraintRight_toRightOf="@+id/short_button"
+            app:layout_constraintTop_toBottomOf="@+id/short_button" />
+
+        <ImageView
+            android:id="@+id/add_button"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_group_2"
+            app:layout_constraintLeft_toRightOf="@+id/short_button"
+            app:layout_constraintRight_toLeftOf="@+id/subscribe_button" />
+
+        <ImageView
+            android:id="@+id/subscribe_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_group__1_"
+            app:layout_constraintBottom_toTopOf="@+id/subscribtion_tv"
+            app:layout_constraintLeft_toRightOf="@+id/add_button"
+            app:layout_constraintRight_toLeftOf="@+id/library_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subscribtion_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subscribtion"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/subscribe_button"
+            app:layout_constraintRight_toRightOf="@+id/subscribe_button"
+            app:layout_constraintTop_toBottomOf="@+id/subscribe_button" />
+
+        <ImageView
+            android:id="@+id/library_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_group"
+            app:layout_constraintBottom_toTopOf="@+id/library_tv"
+            app:layout_constraintLeft_toRightOf="@+id/subscribe_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/library_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Library"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/library_button"
+            app:layout_constraintRight_toRightOf="@+id/library_button"
+            app:layout_constraintTop_toBottomOf="@+id/library_button" />
+
+        <View
+            android:id="@+id/click_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/main_button"
+            app:layout_constraintLeft_toLeftOf="@id/main_button"
+            app:layout_constraintRight_toRightOf="@id/main_button"
+            app:layout_constraintTop_toTopOf="@id/main_button" />
+        <View
+            android:id="@+id/click_shorts"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/short_button"
+            app:layout_constraintLeft_toLeftOf="@id/short_button"
+            app:layout_constraintRight_toRightOf="@id/short_button"
+            app:layout_constraintTop_toTopOf="@id/short_button" />
+        <View
+            android:id="@+id/click_subs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/subscribe_button"
+            app:layout_constraintLeft_toLeftOf="@id/subscribe_button"
+            app:layout_constraintRight_toRightOf="@id/subscribe_button"
+            app:layout_constraintTop_toTopOf="@id/subscribe_button" />
+        <View
+            android:id="@+id/click_library"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/library_button"
+            app:layout_constraintLeft_toLeftOf="@id/library_button"
+            app:layout_constraintRight_toRightOf="@id/library_button"
+            app:layout_constraintTop_toTopOf="@id/library_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
